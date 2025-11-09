@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberByte | Fast. Fresh. Secure.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #0b0c10;
+      }
+      ::selection {
+        background-color: rgba(34, 211, 238, 0.3);
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen text-zinc-100 relative overflow-x-hidden">
+    <!-- Background Glow -->
+    <div
+      class="pointer-events-none absolute inset-0 -z-10"
+    >
+      <div
+        class="absolute -top-32 left-1/2 h-96 w-[60rem] -translate-x-1/2 rounded-full bg-gradient-to-r from-purple-600/30 via-fuchsia-500/20 to-cyan-400/30 blur-3xl"
+      ></div>
+    </div>
+
+    <!-- NAV -->
+    <header class="sticky top-0 z-40 backdrop-blur-sm/0">
+      <div
+        class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5"
+      >
+        <div class="flex items-center gap-3">
+          <!-- Logo -->
+          <svg
+            class="h-9 w-9"
+            viewBox="0 0 200 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient id="cbGradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#8B5CF6" />
+                <stop offset="100%" stop-color="#22D3EE" />
+              </linearGradient>
+            </defs>
+            <g
+              stroke="url(#cbGradient)"
+              stroke-width="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M40 70c0-25 25-40 60-40s60 15 60 40" />
+              <path d="M40 70h120" />
+              <path d="M90 45l-2 6" />
+              <path d="M105 45l-2 6" />
+              <path d="M120 47l-2 6" />
+              <rect x="45" y="90" width="110" height="35" rx="14" />
+              <path d="M65 108v-12m14 12v-12m12 12h8m14 0v-12m16 12h8m10 0v-12" />
+              <rect x="43" y="140" width="114" height="30" rx="14" />
+            </g>
+          </svg>
+          <div
+            class="text-2xl font-extrabold tracking-wide bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent"
+          >
+            CYBERBYTE
+          </div>
+        </div>
+        <nav class="hidden gap-8 text-sm text-zinc-300 md:flex">
+          <a href="#menu" class="hover:text-white">Menu</a>
+          <a href="#features" class="hover:text-white">Features</a>
+          <a href="#pricing" class="hover:text-white">Pricing</a>
+          <a href="#faq" class="hover:text-white">FAQ</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a
+            href="#pricing"
+            class="rounded-xl border border-zinc-800 bg-zinc-900/60 px-4 py-2 text-sm text-zinc-100 hover:border-zinc-700"
+            >View Plans</a
+          >
+          <a
+            href="#cta"
+            class="rounded-xl bg-gradient-to-r from-purple-600 to-cyan-400 px-4 py-2 text-sm font-semibold text-[#0b0c10] shadow-lg shadow-cyan-400/20 hover:opacity-90"
+            >Get Started</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <div class="grid items-center gap-12 md:grid-cols-2">
+        <div>
+          <h1 class="text-4xl font-extrabold leading-tight md:text-6xl">
+            Fast. Fresh.
+            <span
+              class="bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent"
+              >Secure</span
+            >.
+          </h1>
+          <p class="mt-5 max-w-prose text-zinc-300">
+            Cloud storage and security served <em>drive-thru fast</em> with
+            <span
+              class="bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent"
+              >enterprise-grade</span
+            >
+            flavor. Pre-hardened buckets, built-in compliance, and automation
+            that keeps your data sizzling hot—and threats on ice.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href="#pricing"
+              class="rounded-2xl bg-gradient-to-r from-purple-600 to-cyan-400 px-6 py-3 font-semibold text-[#0b0c10] shadow-lg shadow-cyan-400/25 hover:opacity-90"
+              >See the Menu</a
+            >
+            <a
+              href="#features"
+              class="rounded-2xl border border-zinc-800 bg-zinc-900/60 px-6 py-3 text-zinc-100 hover:border-zinc-700"
+              >How it Works</a
+            >
+          </div>
+          <div class="mt-10 flex flex-wrap gap-6 text-xs text-zinc-400">
+            <span class="rounded-full border border-zinc-800 px-3 py-1"
+              >CIS Hardened</span
+            >
+            <span class="rounded-full border border-zinc-800 px-3 py-1"
+              >NIST CSF 2.0-Aligned</span
+            >
+            <span class="rounded-full border border-zinc-800 px-3 py-1"
+              >99.99% Availability</span
+            >
+          </div>
+        </div>
+
+        <!-- Dashboard Mock -->
+        <div
+          class="relative order-first h-[340px] w-full md:order-last md:h-[420px]"
+        >
+          <div
+            class="absolute inset-0 rounded-3xl border border-zinc-800/60 bg-zinc-900/40 p-6 shadow-2xl"
+          >
+            <div class="flex items-center gap-3">
+              <svg
+                class="h-10 w-10"
+                viewBox="0 0 200 200"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <use href="#cbGradient" />
+              </svg>
+              <div class="text-lg font-bold bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent">
+                Combo Console
+              </div>
+            </div>
+            <div class="mt-6 grid grid-cols-2 gap-4">
+              <div
+                class="rounded-2xl border border-zinc-800/60 bg-black/30 p-4"
+              >
+                <div class="text-xs text-zinc-400">Encrypted Buckets</div>
+                <div class="mt-1 text-2xl font-extrabold text-white">128</div>
+                <div class="text-xs text-zinc-500">+8 this week</div>
+              </div>
+              <div
+                class="rounded-2xl border border-zinc-800/60 bg-black/30 p-4"
+              >
+                <div class="text-xs text-zinc-400">Public Access</div>
+                <div class="mt-1 text-2xl font-extrabold text-white">0</div>
+                <div class="text-xs text-zinc-500">auto-blocked</div>
+              </div>
+              <div
+                class="rounded-2xl border border-zinc-800/60 bg-black/30 p-4"
+              >
+                <div class="text-xs text-zinc-400">MTTR</div>
+                <div class="mt-1 text-2xl font-extrabold text-white">42m</div>
+                <div class="text-xs text-zinc-500">▼ 31%</div>
+              </div>
+              <div
+                class="rounded-2xl border border-zinc-800/60 bg-black/30 p-4"
+              >
+                <div class="text-xs text-zinc-400">CIS Conformance</div>
+                <div class="mt-1 text-2xl font-extrabold text-white">92%</div>
+                <div class="text-xs text-zinc-500">+2%</div>
+              </div>
+            </div>
+            <div
+              class="mt-6 rounded-xl bg-gradient-to-r from-purple-600/20 to-cyan-400/20 p-4 text-sm text-zinc-200"
+            >
+              <strong>Auto-Remediation:</strong> misconfigs patched, DLP rules
+              applied, audit trail exported.
+            </div>
+          </div>
+          <div
+            class="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-r from-purple-600/20 to-cyan-400/20 blur-2xl"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="mx-auto max-w-6xl px-6 pb-8">
+      <h2 class="text-2xl font-bold md:text-3xl">
+        The
+        <span
+          class="bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent"
+          >Menu</span
+        >
+        — security included
+      </h2>
+      <p class="mt-3 max-w-3xl text-zinc-400">
+        Every combo comes pre-hardened: encryption, public access blocks,
+        logging, and continuous checks. Add sides like threat intel and DLP when
+        you’re extra hungry.
+      </p>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div
+          class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 shadow-lg shadow-black/20"
+        >
+          <div
+            class="text-lg font-semibold bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent"
+          >
+            Firewall Fries
+          </div>
+          <p class="mt-2 text-sm text-zinc-400">
+            Managed network rules with sane defaults + drift lock.
+          </p>
+        </div>
+        <div
+          class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 shadow-lg shadow-black/20"
+        >
+          <div
+            class="text-lg font-semibold bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent"
+          >
+            EDR Burger
+          </div>
+          <p class="mt-2 text-sm text-zinc-400">
+            Endpoint detection layered with storage events + signals.
+          </p>
+        </div>
+        <div
+          class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 shadow-lg shadow-black/20"
+        >
+          <div
+            class="text-lg font-semibold bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent"
+          >
+            SIEM Shake
+          </div>
+          <p class="mt-2 text-sm text-zinc-400">
+            Unified logs + detections blended into one view.
+          </p>
+        </div>
+        <div
+          class="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-5 shadow-lg shadow-black/20"
+        >
+          <div
+            class="text-lg font-semibold bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent"
+          >
+            Compliance Taco
+          </div>
+          <p class="mt-2 text-sm text-zinc-400">
+            NIST CSF mapping, CIS checks, exportable evidence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="mx-auto max-w-6xl px-6 py-16">
+      <h2 class="text-2xl font-bold md:text-3xl">
+        Pricing
+        <span
+          class="bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent"
+          >Combos</span
+        >
+      </h2>
+      <p class="mt-3 max-w-2xl text-zinc-400">
+        Transparent, predictable, and scalable. No surprise egress.
+      </p>
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <!-- Tier 1 -->
+        <div
+          class="relative rounded-3xl border border-zinc-800 bg-zinc-900/40 p-6 shadow-xl shadow-black/30"
+        >
+          <div
+            class="text-lg font-bold bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent"
+          >
+            Value Meal
+          </div>
+          <div class="mt-4 flex items-end gap-1">
+            <div class="text-4xl font-extrabold">$999</div>
+            <div class="text-zinc-400">/mo</div>
+          </div>
+          <ul class="mt-5 space-y-2 text-sm text-zinc-300">
+            <li>24/7 SOC monitoring</li>
+            <li>Firewall + AV</li>
+            <li>Email security</li>
+            <li>Monthly vuln scans</li>
+            <li>50 endpoints</li>
+          </ul>
+          <a
+            href="#cta"
+            class="mt-6 inline-block w-full rounded-xl bg-gradient-to-r from-purple-600 to-cyan-400 px-4 py-2 text-center font-semibold text-[#0b0c10] hover:opacity-90"
+            >Start Value</a
+          >
+        </div>
+
+        <!-- Tier 2 -->
+        <div
+          class="relative rounded-3xl border border-zinc-800 bg-zinc-900/40 p-6 shadow-xl shadow-black/30"
+        >
+          <div
+            class="absolute -top-3 right-6 rounded-full bg-gradient-to-r from-purple-600 to-cyan-400 px-3 py-1 text-xs font-semibold text-[#0b0c10]"
+          >
+            Popular
+          </div>
+          <div
+            class="text-lg font-bold bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent"
+          >
+            Deluxe Meal
+          </div>
+          <div class="mt-4 flex items-end gap-1">
+            <div class="text-4xl font-extrabold">$2,999</div>
+            <div class="text-zinc-400">/mo</div>
+          </div>
+          <ul class="mt-5 space-y-2 text-sm text-zinc-300">
+            <li>Everything in Value</li>
+            <li>EDR + IDS/IPS</li>
+            <li>SIEM with log analysis</li>
+            <li>Compliance support</li>
+            <li>4-hr IR, 250 endpoints</li>
+          </ul>
+          <a
+            href="#cta"
+            class="mt-6 inline-block w-full rounded-xl bg-gradient-to-r from-purple-600 to-cyan-400 px-4 py-2 text-center font-semibold text-[#0b0c10] hover:opacity-90"
+            >Start Deluxe</a
+          >
+        </div>
+
+        <!-- Tier 3 -->
+        <div
+          class="relative rounded-3xl border border-zinc-800 bg-zinc-900/40 p-6 shadow-xl shadow-black/30"
+        >
+          <div
+            class="text-lg font-bold bg-gradient-to-r from-purple-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent"
+          >
+            Family Feast
+          </div>
+          <div class="mt-4 flex items-end gap-1">
+            <div class="text-4xl font-extrabold">$7,999</div>
+            <div class="text-zinc-400">/mo</div>
+          </div>
+          <ul class="mt-5 space-y-2 text-sm text-zinc-300">
+            <li>Everything in Deluxe</li>
+            <li>Managed XDR</li>
+            <li>Threat intel + Dark web</li>
+            <li>Cloud security (AWS/Azure/GCP)</li>
+            <li>1-hr IR, Unlimited endpoints</li>
+          </ul>
+          <a
+            href="#cta"
+            class="mt-6 inline-block w-full rounded-xl bg-gradient-to-r from-purple-600 to-cyan-400 px-4 py-2 text-center font-semibold text-[#0b0c10] hover:opacity-90"
+            >Start Feast</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-800/60 bg-black/40 py-10">
+      <div
+        class="mx-auto flex max-w-6xl flex-col gap-6
+        <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberBite ByteBuilder™</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0b0c10;
+      color: #f8f8f8;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    section {
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 800;
+      background: linear-gradient(90deg,#8b5cf6,#22d3ee);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    /* 🍔 Spinning logo */
+    #burgerLogo {
+      display: inline-block;
+      font-size: 72px;
+      margin-bottom: 20px;
+      transition: transform 0.1s linear;
+      user-select: none;
+    }
+
+    /* Carousel container */
+    .carousel {
+      position: relative;
+      display: flex;
+      gap: 40px;
+      width: 300vw; /* 3 panels */
+      height: 400px;
+      transform: translateX(0);
+      transition: transform 0.3s ease-out;
+      padding: 40px;
+    }
+
+    /* Each tier card */
+    .tier {
+      width: 80vw;
+      max-width: 700px;
+      background: #111318;
+      border: 1px solid #1f1f23;
+      border-radius: 20px;
+      padding: 30px;
+      flex-shrink: 0;
+      text-align: left;
+      margin: auto;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .tier h2 {
+      font-size: 26px;
+      font-weight: 700;
+      background: linear-gradient(90deg,#8b5cf6,#22d3ee);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .tier ul {
+      color: #888;
+      line-height: 1.8;
+      margin-top: 10px;
+    }
+
+    .tier:hover {
+      transform: scale(1.03);
+      border-color: #22d3ee;
+    }
+
+    /* Add-ons section */
+    .addons {
+      max-width: 900px;
+      margin: 100px auto;
+      text-align: left;
+    }
+
+    .addons h3 {
+      font-size: 24px;
+      font-weight: 700;
+      background: linear-gradient(90deg,#8b5cf6,#22d3ee);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .addons ul {
+      margin-top: 20px;
+      color: #bbb;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+
+<section>
+  <!-- 🍔 Logo and Title -->
+  <div>
+    <div id="burgerLogo">🍔</div>
+    <h1>CyberBite ByteBuilder™</h1>
+    <p>Build your own cloud combo — scale your storage like you upsize a meal.</p>
+  </div>
+
+  <!-- Carousel -->
+  <div id="carouselWrapper" style="overflow:hidden; margin-top:100px;">
+    <div id="carousel" class="carousel">
+      
+      <!-- Tier 1 -->
+      <div class="tier">
+        <h2>🥄 Tier 1 — Just a Byte</h2>
+        <p><em>"Light snack for your cold data."</em></p>
+        <ul>
+          <li>Encrypted at rest (AES-256)</li>
+          <li>Slower retrieval (24–48 hrs)</li>
+          <li>Single-region redundancy</li>
+        </ul>
+        <p style="color:#22d3ee;font-weight:600;">$5–10 / TB / month</p>
+      </div>
+
+      <!-- Tier 2 -->
+      <div class="tier">
+        <h2>🍟 Tier 2 — A Meal</h2>
+        <p><em>"Balanced flavor and performance."</em></p>
+        <ul>
+          <li>Multi-region replication</li>
+          <li>Fast access (minutes)</li>
+          <li>99.9% uptime SLA</li>
+        </ul>
+        <p style="color:#22d3ee;font-weight:600;">$15–20 / TB / month</p>
+      </div>
+
+      <!-- Tier 3 -->
+      <div class="tier">
+        <h2>🍔 Tier 3 — A Whole Munch</h2>
+        <p><em>"The full feast of performance and security."</em></p>
+        <ul>
+          <li>Geo-redundant replication</li>
+          <li>Priority 24/7 support</li>
+          <li>99.99% uptime SLA</li>
+        </ul>
+        <p style="color:#22d3ee;font-weight:600;">$35–40 / TB / month</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add-ons -->
+  <div class="addons">
+    <h3>🍟 Optional Add-Ons</h3>
+    <ul>
+      <li>🔍 <strong>Threat Intel Sauce™</strong> — Dark web monitoring + alerts ($1,000/mo)</li>
+      <li>🌮 <strong>Compliance Taco™</strong> — Pre-audit & framework mapping ($3,000/mo)</li>
+      <li>🛡 <strong>PenTest Platter™</strong> — On-demand penetration testing ($5,000/test)</li>
+      <li>🎓 <strong>Awareness Wraps™</strong> — Employee training ($25/user/mo)</li>
+    </ul>
+  </div>
+
+  <p style="color:#777;font-size:14px;">💡 Prices reference AWS, Google Cloud, & Azure public rates (2024)</p>
+</section>
+
+<script>
+  // 🍔 Spin burger on scroll
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const burger = document.getElementById('burgerLogo');
+    burger.style.transform = `rotate(${scrollY % 360}deg)`;
+
+    // Scroll-driven carousel movement
+    const carousel = document.getElementById('carousel');
+    const scrollMax = document.body.scrollHeight - window.innerHeight;
+    const progress = scrollY / scrollMax;
+    const translateX = -progress * (carousel.scrollWidth - window.innerWidth);
+    carousel.style.transform = `translateX(${translateX}px)`;
+  });
+</script>
+
+</body>
+</html>
